@@ -44,9 +44,12 @@ print "Hello World!"
 | Celda 1, col1 | Celda 2, col2 |
 | Celda 3, col1 | Celda 3, col2 |
 
+: Tabla de trabajo
 
 Día | Ingresos | Egresos
 --- | --- | ---
 1 | $25,000 | $50
 2 | $200 | $320
 3 | $5 | $50,000
+
+: Igresos y egresos

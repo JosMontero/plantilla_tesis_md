@@ -30,9 +30,10 @@
 %% Para matemáticas
 \usepackage{amsmath, amssymb, mathtools}
 %% Parametros para margenes del documento
-%\usepackage[right=2.5cm,left=2.5cm,top=2.5cm,bottom=3cm,headsep=1cm,footskip=1cm]{geometry}
-\usepackage[top=1.5in,bottom=1.5in,left=1.5in,right=1.4in]{geometry}
-\geometry{top=40mm,bottom=33mm,inner=40mm,outer=25mm}
+%%\usepackage[right=2.5cm,left=2.5cm,top=2.5cm,bottom=3cm,headsep=1cm,footskip=1cm]{geometry}
+%%\usepackage[top=1.5in,bottom=1.5in,left=1.5in,right=1.4in]{geometry}
+%%\geometry{top=40mm,bottom=33mm,inner=40mm,outer=25mm}
+\usepackage[width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \setlength{\parskip}{\baselineskip} %Espaciado entre cada párrafo
 \renewcommand{\baselinestretch}{1.5} %Espaciado de línea 1.5 puntos
 \usepackage[T1]{fontenc}
@@ -157,11 +158,15 @@ $endif$
 {\filleft} % texto del cuerpo alineado a la derecha
 [\vspace{0.5mm} \bigrule] % después del cuerpo, dejar espacio vertical y trazar línea horizontal gruesa
 
+
 %%%------------------------------------------------------------------------
 %%% Cuerpo del Documento
 %%%------------------------------------------------------------------------
 
 \begin{document}
+  $if(title)$
+  \maketitle
+  $endif$
 
   $if(alignment)$
   \begin{$alignment$}

@@ -16,3 +16,5 @@ Proin eleifend ex id neque pharetra, sit amet interdum massa lobortis. Phasellus
 | ------------- | ------------- |
 | Celda 1, col1 | Celda 2, col2 |
 | Celda 3, col1 | Celda 3, col2 |
+
+: Tabla resultados
