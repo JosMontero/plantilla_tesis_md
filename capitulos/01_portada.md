@@ -22,11 +22,11 @@ bibliography: <!-- \bibliography{/Users/kjhealy/Documents/bibs/socbib-pandoc.bib
     \large
     Programa de Posgrado en Ciencias de la Administración\\
 
-        \vspace*{1cm}
+        \vspace*{1.5cm}
         \normalsize
         \textbf{Título de tu tesis}
 
-        \vspace{1cm}
+        \vspace{1.5cm}
         \Large
         T e s i s\\
         \normalsize
@@ -34,13 +34,13 @@ bibliography: <!-- \bibliography{/Users/kjhealy/Documents/bibs/socbib-pandoc.bib
         \large
         Maestro/a en ...
 
-        \vspace{.8cm}
+        \vspace{1.5cm}
         \normalsize
         Presenta:\\
         \textbf{Tu nombre completo}
 
 
-        \vspace{.8cm}
+        \vspace{1cm}
         %\vfill
         \normalsize
         Tutor:\\
@@ -48,7 +48,7 @@ bibliography: <!-- \bibliography{/Users/kjhealy/Documents/bibs/socbib-pandoc.bib
         \textbf{Dependencia, UNAM}\\
 
 
-        \vspace{0.3cm}
+        \vspace{1cm}
         \small
         \textbf{México, D. F., (mes en que se realiza el examen con letra
         minúscula) de 2016}

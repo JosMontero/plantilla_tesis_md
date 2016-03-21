@@ -11,8 +11,18 @@
 \documentclass[letterpaper, 12pt, spanish, twoside]{book}
 
 %Paquetes
-\usepackage{helvet}
+% Typografia
+%\usepackage{fontspec}
+%\usepackage{charter} %% Charter
+%\renewcommand{\familydefault}{bch}
+%\usepackage{avant} %% Avant Grade
+%\renewcommand{\familydefault}{pag}
+\usepackage{palatino} %% Palatino
+\renewcommand{\familydefault}{ppl}
+%\usepackage{helvet} %% Helvetica
+%\renewcommand{\familydefault}{phv}
 %\renewcommand{\familydefault}{\sfdefault}
+
 \usepackage{cite} %Referenciar citas en biblitex
 \usepackage{apacite}
 \usepackage{hyperref}
@@ -34,8 +44,11 @@
 %%\usepackage[top=1.5in,bottom=1.5in,left=1.5in,right=1.4in]{geometry}
 %%\geometry{top=40mm,bottom=33mm,inner=40mm,outer=25mm}
 \usepackage[width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
-\setlength{\parskip}{\baselineskip} %Espaciado entre cada párrafo
+%\setlength{\parskip}{\baselineskip} %Espaciado entre cada párrafo
 \renewcommand{\baselinestretch}{1.5} %Espaciado de línea 1.5 puntos
+%\usepackage{setspace}
+%\onehalfspacing
+%\raggedbottom
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 
@@ -158,15 +171,14 @@ $endif$
 {\filleft} % texto del cuerpo alineado a la derecha
 [\vspace{0.5mm} \bigrule] % después del cuerpo, dejar espacio vertical y trazar línea horizontal gruesa
 
-
 %%%------------------------------------------------------------------------
 %%% Cuerpo del Documento
 %%%------------------------------------------------------------------------
 
 \begin{document}
-  $if(title)$
-  \maketitle
-  $endif$
+%%  $if(title)$
+%%  \maketitle
+%%  $endif$
 
   $if(alignment)$
   \begin{$alignment$}
