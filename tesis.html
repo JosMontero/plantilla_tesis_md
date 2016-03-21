@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                    <meta name="author" content="Fulano de Tal" />
+                        <title>Título tu tesis</title>
+        <style type="text/css">code{white-space: pre;}</style>
+                            <style type="text/css">
+            div.sourceCode { overflow-x: auto; }
+            table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+              margin: 0; padding: 0; vertical-align: baseline; border: none; }
+            table.sourceCode { width: 100%; line-height: 100%; }
+            td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+            td.sourceCode { padding-left: 5px; }
+            code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+            code > span.dt { color: #902000; } /* DataType */
+            code > span.dv { color: #40a070; } /* DecVal */
+            code > span.bn { color: #40a070; } /* BaseN */
+            code > span.fl { color: #40a070; } /* Float */
+            code > span.ch { color: #4070a0; } /* Char */
+            code > span.st { color: #4070a0; } /* String */
+            code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+            code > span.ot { color: #007020; } /* Other */
+            code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+            code > span.fu { color: #06287e; } /* Function */
+            code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+            code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+            code > span.cn { color: #880000; } /* Constant */
+            code > span.sc { color: #4070a0; } /* SpecialChar */
+            code > span.vs { color: #4070a0; } /* VerbatimString */
+            code > span.ss { color: #bb6688; } /* SpecialString */
+            code > span.im { } /* Import */
+            code > span.va { color: #19177c; } /* Variable */
+            code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+            code > span.op { color: #666666; } /* Operator */
+            code > span.bu { } /* BuiltIn */
+            code > span.ex { } /* Extension */
+            code > span.pp { color: #bc7a00; } /* Preprocessor */
+            code > span.at { color: #7d9029; } /* Attribute */
+            code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+            code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+            code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+            code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+            </style>
+                                            <style>
+            body {
+                /*font-family: Georgia;*/
+                font-family: Georgia, Baskerville, Palatino, serif;
+                max-width: 800px;
+                margin: 0 auto;
+                line-height: 30px;
+                font-size: 18px;
+                padding-left: 350px;
+                padding-right: 50px;
+                color: #111;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+                font-family: Helvetica, Verdana, Arial;;
+            }
+            
+            h1 {
+                padding-top: 200px;
+                line-height: 50px;
+            }
+            h2 {
+                padding-top: 30px;
+            }
+            h3 {
+                padding-top: 20px;
+            }
+            h4 {
+                padding-top: 10px;
+            }
+            p {
+                text-align: justify;
+            }
+            p a {
+                word-wrap: break-word;
+                white-space: pre;
+            }
+            code {
+              font-family: monospace,serif;
+              margin: 0;
+              padding: 0;
+              color: #423F37;
+            }
+            blockquote {
+                color: #423F37;
+                margin: 1em 40px;
+                word-wrap: break-word;
+            }
+            
+            blockquote {
+                border-left: 3px solid #eee;
+                margin-bottom: 2em;
+                margin-top: 2em;
+                padding-left: 20px;
+            }
+            
+            ::selection {
+                background-color: #E4E4E4;
+            }
+            
+            figure {
+            	  margin-left: -4.5rem;
+                margin-right: -4.5rem;
+                margin-bottom: 2em;
+                margin-top: 2em;
+            }
+            
+            figure > figcaption {
+                margin-top: 0.5em;
+            }
+            small, dd, figcaption {
+                color: #A19C91;
+                display: block;
+                font-size: 0.8rem;
+                font-style: italic;
+                text-align: center;
+                line-height: 1.2;
+            }
+            pre {
+                background-color: #F8F5F0;
+                margin: 1em 0;
+                overflow-x: auto;
+                padding: 1.3rem;
+                position: relative;
+                white-space: pre;
+                word-wrap: normal;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                font-family: monospace,serif;
+            }
+            
+            tbody{display:table-row-group}
+            tfoot{display:table-footer-group}
+            table{margin-bottom:2em;font-size: 0.8em;padding:0;border-collapse:collapse;-webkit-box-shadow:1px 1px 2px rgba(0,0,0,.35);width:80%;margin:0 auto 2em auto}
+            table th,table td{padding:10px 10px 9px;line-height:18px;text-align:left}
+            table th{
+            padding-top:9px;!important;text-transform:uppercase;vertical-align:middle}
+            table td{vertical-align:top;border-top:1px solid #ddd;}
+            table tbody th{border-top:1px solid #ddd;vertical-align:top}
+            table{border:1px solid #ddd;border-collapse:separate;*border-collapse:collapse;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
+            table th+th,table td+td,table th+td{border-left:1px solid #ddd}
+            table thead tr:first-child th:first-child,table tbody tr:first-child td:first-child{-webkit-border-radius:4px 0 0 0;-moz-border-radius:4px 0 0 0;border-radius:4px 0 0 0}
+            table thead tr:first-child th:last-child,table tbody tr:first-child td:last-child{-webkit-border-radius:0 4px 0 0;-moz-border-radius:0 4px 0 0;border-radius:0 4px 0 0}
+            table tbody tr:last-child td:first-child{-webkit-border-radius:0 0 0 4px;-moz-border-radius:0 0 0 4px;border-radius:0 0 0 4px}
+            table tbody tr:last-child td:last-child{-webkit-border-radius:0 0 4px 0;-moz-border-radius:0 0 4px 0;border-radius:0 0 4px 0}
+            tbody tr:nth-child(odd){background-color:rgba(0,0,0,0.03)}
+            caption{display:table-caption;font-weight:300;font-size:1.3em;text-transform:uppercase;letter-spacing:2px;word-spacing:.2em;background:rgba(0,0,0,.75);color:#EEE;padding:4px;-webkit-border-radius:4px;margin:4px 0;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.35)}
+            .title{text-align: center; padding-bottom: 1em;}
+            .author{text-align: center; padding-top: 0.5em;font-size:1.24em;line-height:0.5em;}
+            .date {text-align: center; color: #C7C2B8; display: block; font-size: 0.8rem;}
+            .caption {display: block;font-size: 0.8rem;font-style: italic;text-align:center;margin-bottom:1em; margin-top:.2em;}
+            .small{font-size:0.8em;}
+            
+            p span.added {
+                color: green;
+                background-color: #FFF3C5;
+            }
+            p span.removed {
+                color: red;
+                background-color: #FFF3C5;
+            }
+            
+            #title-page {
+                padding: 80px 0;
+            }
+            
+            #TOC {
+                position: fixed;
+                left: 0;
+                top: 0;
+                overflow-y: scroll;
+                height: 100%;
+                background: #fafafa;
+                max-width: 300px;
+                font-family: Arial;
+                font-size: 15px;
+                line-height: 30px;
+            }
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background-color: #ECECEC;
+            }
+            ::-webkit-scrollbar-thumb {
+                background-color: #B0B0B0;
+                border-radius: 8px;
+            }
+            #TOC > ul {
+                padding-right: 10px;
+            }
+            #TOC ul {
+                list-style: none;
+                padding-left: 20px;
+            }
+            #TOC ul li a {
+                text-decoration: none;
+                color: #364149;
+                text-overflow: ellipsis;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            #TOC ul li a:hover {
+                color: #008cff;
+            }
+            
+            </style>
+                <script src="js/jquery.js"></script>
+        <script src="js/diff.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+                <!--
+                    <div id="header">
+                <h1 class="title">Título tu tesis</h1>
+                                                <h2 class="author">Fulano de Tal</h2>
+                                                <h3 class="date">Marzo 2016</h3>
+                            </div>
+                -->
+        <div id="title-page">
+            <h1>Título tu tesis</h1>
+            <h2>Fulano de Tal</h2>
+        </div>
+                    <div id="TOC">
+                <ul>
+                <li><a href="#agradecimientos">Agradecimientos</a></li>
+                <li><a href="#resumen">Resumen</a></li>
+                <li><a href="#introducción"><span class="toc-section-number">1</span> Introducción</a><ul>
+                <li><a href="#presentación"><span class="toc-section-number">1.1</span> Presentación</a></li>
+                <li><a href="#objetivo"><span class="toc-section-number">1.2</span> Objetivo</a></li>
+                <li><a href="#motivación"><span class="toc-section-number">1.3</span> Motivación</a></li>
+                <li><a href="#planteamiento-del-problema"><span class="toc-section-number">1.4</span> Planteamiento del problema</a></li>
+                <li><a href="#metodología"><span class="toc-section-number">1.5</span> Metodología</a></li>
+                <li><a href="#contribuciones"><span class="toc-section-number">1.6</span> Contribuciones</a></li>
+                <li><a href="#resumen-capitular"><span class="toc-section-number">1.7</span> Resumen capitular</a></li>
+                </ul></li>
+                <li><a href="#marco-teórico"><span class="toc-section-number">2</span> Marco teórico</a><ul>
+                <li><a href="#subsección-del-tema"><span class="toc-section-number">2.1</span> Subsección del tema</a></li>
+                <li><a href="#subsección-del-tema-1"><span class="toc-section-number">2.2</span> Subsección del tema</a></li>
+                </ul></li>
+                <li><a href="#desarrollo-del-trabajo"><span class="toc-section-number">3</span> Desarrollo del trabajo</a><ul>
+                <li><a href="#subsección-del-trabajo"><span class="toc-section-number">3.1</span> Subsección del trabajo</a></li>
+                <li><a href="#otro-tema-o-sección"><span class="toc-section-number">3.2</span> Otro tema o sección</a></li>
+                <li><a href="#subsección-del-tema-2"><span class="toc-section-number">3.3</span> Subsección del tema</a><ul>
+                <li><a href="#insertar-código"><span class="toc-section-number">3.3.1</span> Insertar código</a></li>
+                <li><a href="#tablas"><span class="toc-section-number">3.3.2</span> Tablas</a></li>
+                </ul></li>
+                </ul></li>
+                <li><a href="#análisis-de-resultados"><span class="toc-section-number">4</span> Análisis de Resultados</a><ul>
+                <li><a href="#resultados"><span class="toc-section-number">4.1</span> Resultados</a><ul>
+                <li><a href="#tablas-1"><span class="toc-section-number">4.1.1</span> Tablas</a></li>
+                </ul></li>
+                </ul></li>
+                <li><a href="#conclusiones"><span class="toc-section-number">5</span> Conclusiones</a></li>
+                <li><a href="#códigomanualespublicaciones"><span class="toc-section-number">6</span> Código/Manuales/Publicaciones</a><ul>
+                <li><a href="#apéndice"><span class="toc-section-number">6.1</span> Apéndice</a></li>
+                </ul></li>
+                <li><a href="#referencias">Referencias</a></li>
+                </ul>
+            </div>
+                                <!--
+Portada Posgrado en Ciencias de la Administración, UNAM
+-->
+
+<h1 id="agradecimientos" class="unnumbered">Agradecimientos</h1>
+<!-- Esta es la página de agradecimientos -->
+<p>También quisiera reconocer a … por … interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue fermentum ante, semper porta nisl consectetur ut. Duis ornare sit amet dui ac faucibus. Phasellus ullamcorper leo vitae arcu ultricies cursus. Duis tristique lacus eget metus bibendum, at dapibus ante malesuada. In dictum nulla nec porta varius. Fusce et elit eget sapien fringilla maximus in sit amet dui.</p>
+<p>Mauris eget blandit nisi, faucibus imperdiet odio. Suspendisse blandit dolor sed tellus venenatis, venenatis fringilla turpis pretium. Donec pharetra arcu vitae euismod tincidunt. Morbi ut turpis volutpat, ultrices felis non, finibus justo. Proin convallis accumsan sem ac vulputate. Sed rhoncus ipsum eu urna placerat, sed rhoncus erat facilisis. Praesent vitae vestibulum dui. Proin interdum tellus ac velit varius, sed finibus turpis placerat.</p>
+<!-- Se usa el comando \newpage para crear una nueva página -->
+
+<!-- This page is for an official declaration. -->
+
+<p> </p>
+<h1 id="resumen" class="unnumbered">Resumen</h1>
+<!-- Este es el resumen -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et turpis gravida, lacinia ante sit amet, sollicitudin erat. Aliquam efficitur vehicula leo sed condimentum. Phasellus lobortis eros vitae rutrum egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at urna imperdiet, vulputate orci eu, sollicitudin leo. Donec nec dui sagittis, malesuada erat eget, vulputate tellus. Nam ullamcorper efficitur iaculis. Mauris eu vehicula nibh. In lectus turpis, tempor at felis a, egestas fermentum massa.</p>
+
+
+<p></p>
+<p></p>
+<!--
+%Introducción ~10 páginas - Explicar el propósito de la tesis
+-->
+<h1 id="introducción"><span class="header-section-number">1</span> Introducción</h1>
+<p>Este trabajo versa sobre … Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis quam<span class="citation">(Swartz, n.d.)</span>.</p>
+<p>Proin eleifend ex id neque pharetra, sit amet interdum massa lobortis. Phasellus sit amet ullamcorper nisl. Nulla lobortis est vel consectetur molestie. Nunc ac feugiat lacus. Ut velit mi, faucibus in lacinia bibendum, facilisis ac ex. Aliquam congue feugiat fringilla. Nulla nisi metus, dignissim sed ex nec, luctus lacinia sapien. Praesent auctor dapibus ipsum sit amet vulputate. Vestibulum semper tempus laoreet. Donec tempus ligula at nisl ultricies, eget efficitur enim elementum. Nullam aliquet ultrices rutrum. In a massa in nunc auctor interdum eu vel ante. Etiam quam enim, rutrum ut ornare non, efficitur ut ligula. Ut non pellentesque augue<span class="citation">(Pérez, 2001)</span>.</p>
+<h2 id="presentación"><span class="header-section-number">1.1</span> Presentación</h2>
+<p>In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula. Suspendisse ac accumsan est. Aliquam faucibus nisl vitae lacinia pretium. Proin non vulputate nunc. Nullam quis lacinia lectus, nec bibendum enim. Duis quam magna, rutrum sit amet elit nec, scelerisque finibus nunc.</p>
+<p>Fusce ultricies tincidunt risus, nec rutrum lacus accumsan non. Quisque suscipit velit in nibh finibus commodo. Proin fringilla at lacus et venenatis. Quisque congue accumsan nisl, eu malesuada tellus placerat at<span class="citation">(Dickson, 2013)</span>. Donec euismod, dui quis viverra ornare, metus velit imperdiet turpis, quis pharetra lectus felis ut dui. Etiam ultricies tincidunt neque id finibus. Nulla a mi et dolor suscipit finibus. Vestibulum dui nulla, sagittis non nisl euismod, blandit rutrum eros. Praesent eget lectus est. Ut vitae luctus dolor.</p>
+<h2 id="objetivo"><span class="header-section-number">1.2</span> Objetivo</h2>
+<p>Este trabajo tiene por objetivo …Fusce ultricies tincidunt risus, nec rutrum lacus accumsan non. Quisque suscipit velit in nibh finibus commodo.</p>
+<p>Objetivos particulares:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Punto 1</strong>, In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula.</li>
+<li><strong>Punto 2</strong>, In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula.</li>
+<li><strong>Punto 3</strong>, In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula.</li>
+<li><strong>Punto 4</strong>, In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula.</li>
+</ol>
+<h2 id="motivación"><span class="header-section-number">1.3</span> Motivación</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis</p>
+<h2 id="planteamiento-del-problema"><span class="header-section-number">1.4</span> Planteamiento del problema</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis</p>
+<h2 id="metodología"><span class="header-section-number">1.5</span> Metodología</h2>
+<p>Se tiene un objetivo principal, y para llegar a … Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis</p>
+<h2 id="contribuciones"><span class="header-section-number">1.6</span> Contribuciones</h2>
+<p>La principal contribución de este trabajo es … Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis</p>
+<h2 id="resumen-capitular"><span class="header-section-number">1.7</span> Resumen capitular</h2>
+<!--
+For italic, add one * on either side of the text
+For bold, add two * on either side of the text
+For bold and italic, add _** on either side of the text
+-->
+<p>Este trabajo está dividido en XX capítulos. Al principio se encuentra This is a brief outline of what went into each chapter. <strong>Capítulo 1</strong> lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. <strong>Capítulo 2</strong> lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Capítulo 3</strong> lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Capítulo 4</strong> lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p>Finalmente se encuentra la parte de <strong>Conclusiones</strong> lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<!--
+Capitulo 1 o Marco teorico ~20 páginas - Poner un contexto a la tesis, hacer referencia a trabajos actuales en el tema
+-->
+<h1 id="marco-teórico"><span class="header-section-number">2</span> Marco teórico</h1>
+<p>En este capítulo, normalmete se ponen todas las fuentes y referencias que se van a usar en la tesis, así ya nomás se hace referencia a algo tal o “como se vió en el capítulo 1”, y esas cosas.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis quamn <span class="citation">(Kaplan &amp; Norton, 1999)</span>.</p>
+<p>Proin eleifend ex id neque pharetra, sit amet interdum massa lobortis. Phasellus sit amet ullamcorper nisl. Nulla lobortis est vel consectetur molestie. Nunc ac feugiat lacus. Ut velit mi, faucibus in lacinia bibendum, facilisis ac ex. Aliquam congue feugiat fringilla. Nulla nisi metus, dignissim sed ex nec, luctus lacinia sapien. Praesent auctor dapibus ipsum sit amet vulputate. Vestibulum semper tempus laoreet. Donec tempus ligula at nisl ultricies, eget efficitur enim elementum. Nullam aliquet ultrices rutrum. In a massa in nunc auctor interdum eu vel ante. Etiam quam enim, rutrum ut ornare non, efficitur ut ligula. Ut non pellentesque augue.</p>
+<h2 id="subsección-del-tema"><span class="header-section-number">2.1</span> Subsección del tema</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu <span class="citation">(Kaplan &amp; Norton, 1999)</span>. Quisque eget blandit nibh, in facilisis quam.</p>
+<p>Proin eleifend ex id neque pharetra, sit amet interdum massa lobortis. Phasellus sit amet ullamcorper nisl. Nulla lobortis est vel consectetur molestie. Nunc ac feugiat lacus. Ut velit mi, faucibus in lacinia bibendum, facilisis ac ex. Aliquam congue feugiat fringilla. Nulla nisi metus, dignissim sed ex nec, luctus lacinia sapien. Praesent auctor dapibus ipsum sit amet vulputate. Vestibulum semper tempus laoreet. Donec tempus ligula at nisl ultricies, eget efficitur enim elementum. Nullam aliquet ultrices rutrum. In a massa in nunc auctor interdum eu vel ante. Etiam quam enim, rutrum ut ornare non, efficitur ut ligula. Ut non pellentesque augue.</p>
+<p>In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula. Suspendisse ac accumsan est. Aliquam faucibus nisl vitae lacinia pretium. Proin non vulputate nunc. Nullam quis lacinia lectus, nec bibendum enim. Duis quam magna, rutrum sit amet elit nec, scelerisque finibus nunc.</p>
+<div class="figure">
+<img src="capitulos/figuras/bsc1.jpg" alt="Título de la imagen" />
+<p class="caption">Título de la imagen</p>
+</div>
+<h2 id="subsección-del-tema-1"><span class="header-section-number">2.2</span> Subsección del tema</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis quam <span class="citation">(Kaplan &amp; Norton, 1999)</span>.</p>
+<!--
+Diseño del experimento o desarrollo del tema ~20 páginas - Explicar el problema en específico que se va a resolver, la metodología y experimentos/métodos utilizados
+-->
+<h1 id="desarrollo-del-trabajo"><span class="header-section-number">3</span> Desarrollo del trabajo</h1>
+<p>En este capítulo, se presenta la introducción al desarrollo de la tesis, ya sea el modelo matemático o las bases del proyecto, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis quamn <span class="citation">(Kaplan &amp; Norton, 1999)</span>.</p>
+<p>Proin eleifend ex id neque pharetra, sit amet interdum massa lobortis. Phasellus sit amet ullamcorper nisl. Nulla lobortis est vel consectetur molestie. Nunc ac feugiat lacus. Ut velit mi, faucibus in lacinia bibendum, facilisis ac ex. Aliquam congue feugiat fringilla. Nulla nisi metus, dignissim sed ex nec, luctus lacinia sapien. Praesent auctor dapibus ipsum sit amet vulputate. Vestibulum semper tempus laoreet. Donec tempus ligula at nisl ultricies, eget efficitur enim elementum. Nullam aliquet ultrices rutrum. In a massa in nunc auctor interdum eu vel ante. Etiam quam enim, rutrum ut ornare non, efficitur ut ligula. Ut non pellentesque augue.</p>
+<h2 id="subsección-del-trabajo"><span class="header-section-number">3.1</span> Subsección del trabajo</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu <span class="citation">(Kaplan &amp; Norton, 1999)</span>. Quisque eget blandit nibh, in facilisis quam.</p>
+<p>Proin eleifend ex id neque pharetra, sit amet interdum massa lobortis. Phasellus sit amet ullamcorper nisl. Nulla lobortis est vel consectetur molestie. Nunc ac feugiat lacus. Ut velit mi, faucibus in lacinia bibendum, facilisis ac ex. Aliquam congue feugiat fringilla. Nulla nisi metus, dignissim sed ex nec, luctus lacinia sapien. Praesent auctor dapibus ipsum sit amet vulputate. Vestibulum semper tempus laoreet. Donec tempus ligula at nisl ultricies, eget efficitur enim elementum. Nullam aliquet ultrices rutrum. In a massa in nunc auctor interdum eu vel ante. Etiam quam enim, rutrum ut ornare non, efficitur ut ligula. Ut non pellentesque augue.</p>
+<p>In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula. Suspendisse ac accumsan est. Aliquam faucibus nisl vitae lacinia pretium. Proin non vulputate nunc. Nullam quis lacinia lectus, nec bibendum enim. Duis quam magna, rutrum sit amet elit nec, scelerisque finibus nunc.</p>
+<h2 id="otro-tema-o-sección"><span class="header-section-number">3.2</span> Otro tema o sección</h2>
+<p>Colocar viñetas:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Punto 1</strong>, In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula.</li>
+<li><strong>Punto 2</strong>, In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula.</li>
+<li><strong>Punto 3</strong>, In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula.</li>
+<li><strong>Punto 4</strong>, In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula.</li>
+</ol>
+<div class="figure">
+<img src="capitulos/figuras/bsc1.jpg" alt="Título de la imagen" />
+<p class="caption">Título de la imagen</p>
+</div>
+<h2 id="subsección-del-tema-2"><span class="header-section-number">3.3</span> Subsección del tema</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis quam <span class="citation">(Kaplan &amp; Norton, 1999)</span>.</p>
+<h3 id="insertar-código"><span class="header-section-number">3.3.1</span> Insertar código</h3>
+<p>Ejemplo de fracción de código fuente en Python:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span> <span class="st">&quot;Hello World!&quot;</span></code></pre></div>
+<h3 id="tablas"><span class="header-section-number">3.3.2</span> Tablas</h3>
+<table>
+<caption>Tabla de trabajo</caption>
+<thead>
+<tr class="header">
+<th align="left">Columna 1</th>
+<th align="left">Columna 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Celda 1, col1</td>
+<td align="left">Celda 2, col2</td>
+</tr>
+<tr class="even">
+<td align="left">Celda 3, col1</td>
+<td align="left">Celda 3, col2</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Ingresos y egresos</caption>
+<thead>
+<tr class="header">
+<th align="left">Día</th>
+<th align="left">Ingresos</th>
+<th align="left">Egresos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">$25,000</td>
+<td align="left">$50</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">$200</td>
+<td align="left">$320</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">$5</td>
+<td align="left">$50,000</td>
+</tr>
+</tbody>
+</table>
+<!--
+Capitulo 3 o Análisis de resultados ~20 páginas - Presentar los resultados tal cual son, y analizarlos.
+-->
+<h1 id="análisis-de-resultados"><span class="header-section-number">4</span> Análisis de Resultados</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis quamn.</p>
+<p>Proin eleifend ex id neque pharetra, sit amet interdum massa lobortis. Phasellus sit amet ullamcorper nisl. Nulla lobortis est vel consectetur molestie. Nunc ac feugiat lacus. Ut velit mi, faucibus in lacinia bibendum, facilisis ac ex. Aliquam congue feugiat fringilla. Nulla nisi metus, dignissim sed ex nec, luctus lacinia sapien. Praesent auctor dapibus ipsum sit amet vulputate. Vestibulum semper tempus laoreet. Donec tempus ligula at nisl ultricies, eget efficitur enim elementum. Nullam aliquet ultrices rutrum. In a massa in nunc auctor interdum eu vel ante. Etiam quam enim, rutrum ut ornare non, efficitur ut ligula. Ut non pellentesque augue.</p>
+<h2 id="resultados"><span class="header-section-number">4.1</span> Resultados</h2>
+<h3 id="tablas-1"><span class="header-section-number">4.1.1</span> Tablas</h3>
+<table>
+<caption>Tabla resultados</caption>
+<thead>
+<tr class="header">
+<th align="left">Columna 1</th>
+<th align="left">Columna 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Celda 1, col1</td>
+<td align="left">Celda 2, col2</td>
+</tr>
+<tr class="even">
+<td align="left">Celda 3, col1</td>
+<td align="left">Celda 3, col2</td>
+</tr>
+</tbody>
+</table>
+<!--
+Capitulo 4 o Conclusiones ~5 páginas - Resumir lo que se hizo y lo que no y comentar trabajos futuros sobre el tema.
+-->
+<h1 id="conclusiones"><span class="header-section-number">5</span> Conclusiones</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis quam.</p>
+<!--
+Apendices
+-->
+<p></p>
+<h1 id="códigomanualespublicaciones"><span class="header-section-number">6</span> Código/Manuales/Publicaciones</h1>
+<h2 id="apéndice"><span class="header-section-number">6.1</span> Apéndice</h2>
+<p>Apéndice</p>
+<h1 id="referencias" class="unnumbered">Referencias</h1>
+<p>    </p>
+<div id="refs" class="references">
+<div id="ref-dickson2013xamarin">
+<p>Dickson, J. (2013). Xamarin mobile development.</p>
+</div>
+<div id="ref-kaplan1999">
+<p>Kaplan, R. S., &amp; Norton, D. P. (1999). <em>El cuadro de mando integral: The balanced scorecard.</em></p>
+</div>
+<div id="ref-perez2001cambio">
+<p>Pérez, C. (2001). Cambio tecnológico y oportunidades de desarrollo como blanco móvil.</p>
+</div>
+<div id="ref-swartzaaron">
+<p>Swartz, A. (n.d.). Aaron swartz. <em>Aaron Swartz</em>.</p>
+</div>
+</div>
+            </body>
+</html>

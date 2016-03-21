@@ -1,20 +1,3 @@
-## Put this Makefile in your project directory---i.e., the directory
-## containing the paper you are writing. Assuming you are using the
-## rest of the toolchain here, you can use it to create .html, .tex,
-## and .pdf output files (complete with bibliography, if present) from
-## your markdown file.
-## -    Install the `pandoc-citeproc` and `pandoc-citeproc-preamble`
-##      filters for `pandoc`. See the README for links.
-## -	Change the paths at the top of the file as needed.
-## -	Using `make` without arguments will generate html, tex, and pdf
-## 	output files from all of the files with the designated markdown
-##	extension. The default is `.md` but you can change this.
-## -	You can specify an output format with `make tex`, `make pdf` or
-## - 	`make html`.
-## -	Doing `make clean` will remove all the .tex, .html, and .pdf files
-## 	in your working directory. Make sure you do not have files in these
-##	formats that you want to keep!
-
 ## Markdown extension (e.g. md, markdown, mdown).
 BASEDIR=$(CURDIR)
 CAPITULOS=$(BASEDIR)/capitulos
@@ -51,10 +34,9 @@ docx:
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" --toc --number-sections -o "$(TESIS)".docx "$(CAPITULOS)"/*.md
 
 epub:
-	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" --toc --number-sections -o "$(TESIS)".epub "$(CAPITULOS)"/*.md
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --epub-cover-image="$(ESTILOSDIR)"/portada.png -s -S --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" --toc --number-sections --epub-stylesheet="$(ESTILOSDIR)"/epub.css --to epub3 -o "$(TESIS)".epub "$(CAPITULOS)"/*.md
 
 html:
-	#pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -S --template="$(PREFIX)"/templates/html.template --css=$(PREFIX)/marked/kultiad-serif.css --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography="$(BIB)" --toc --number-sections -o "$(TESIS)".html "$(CAPITULOS)"/*.md
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -S --template="$(ESTILOSDIR)"/template.html --include-in-header="$(ESTILOSDIR)"/style.css --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography="$(BIB)" --toc --number-sections -o "$(TESIS)".html "$(CAPITULOS)"/*.md
 
 

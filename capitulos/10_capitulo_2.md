@@ -52,4 +52,4 @@ Día | Ingresos | Egresos
 2 | $200 | $320
 3 | $5 | $50,000
 
-: Igresos y egresos
+: Ingresos y egresos
