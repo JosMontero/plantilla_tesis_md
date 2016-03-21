@@ -68,8 +68,8 @@ Las nuevas fuentes bibliográficas se agregan en *capitulos/bibliografia.bib* em
 ## Requerimientos
 ### Windows
 - Git [http://git-scm.com](http://git-scm.com)
-- make
-- gawk
+- GNU Make
+- GNU Awk
 - MiKTeX, [http://miktex.org](http://miktex.org/download)
 - Texmaker, [www.xm1math.net/texmaker/](http://www.xm1math.net/texmaker/download.html)
 - Pandoc, [https://github.com/jgm/pandoc/releases/tag/1.16.0.2](https://github.com/jgm/pandoc/releases/tag/1.16.0.2)
@@ -79,8 +79,8 @@ Las nuevas fuentes bibliográficas se agregan en *capitulos/bibliografia.bib* em
 
 ### OSX
 - Git [http://git-scm.com](http://git-scm.com)
-- make (Se debe instalar y descargar desde la línea de comandos)
-- gawk
+- GNU Make (Se debe instalar y descargar desde la línea de comandos)
+- GNU Awk
 - MacTeX, [https://tug.org/mactex/](https://tug.org/mactex/downloading.html)
 - Texmaker, [www.xm1math.net/texmaker/](http://www.xm1math.net/texmaker/download.html)
 - Pandoc, [https://github.com/jgm/pandoc/releases/tag/1.16.0.2](https://github.com/jgm/pandoc/releases/tag/1.16.0.2)
@@ -90,8 +90,8 @@ Las nuevas fuentes bibliográficas se agregan en *capitulos/bibliografia.bib* em
 
 ### Linux
 - Git [http://git-scm.com](http://git-scm.com)
-- make
-- gawk
+- GNU Make
+- GNU Awk
 - Latex, instalar según tu distribución con apt-get, yum, zypper, pacman o tgz.
 - Texmaker, [www.xm1math.net/texmaker/](http://www.xm1math.net/texmaker/download.html)
 - Pandoc, [https://github.com/jgm/pandoc/releases/tag/1.16.0.2](https://github.com/jgm/pandoc/releases/tag/1.16.0.2)
