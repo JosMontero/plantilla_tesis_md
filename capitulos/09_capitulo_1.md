@@ -19,7 +19,7 @@ Proin eleifend ex id neque pharetra, sit amet interdum massa lobortis. Phasellus
 In sit amet metus sapien. Donec a massa consequat purus accumsan finibus quis a dui. Aenean mauris elit, bibendum nec est vitae, consequat ultrices ligula. Suspendisse ac accumsan est. Aliquam faucibus nisl vitae lacinia pretium. Proin non vulputate nunc. Nullam quis lacinia lectus, nec bibendum enim. Duis quam magna, rutrum sit amet elit nec, scelerisque finibus nunc.
 
 
-![Título de la imagen](capitulos/figuras/bsc1.jpg)
+![Modelo digital](capitulos/figuras/bsc1.jpg)
 
 ## Subsección del tema
 

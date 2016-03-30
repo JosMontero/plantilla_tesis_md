@@ -6,7 +6,7 @@ title: Título
 author: Nombre Autor
 date: 18 de marzo de 2016
 abstract: Un breve resumen
-bibliography: biblio/bibliografia.bib
+bibliography: bibliografia.bib
 ---
 
 # Introducción
@@ -49,12 +49,6 @@ Se tiene un objetivo principal, y para llegar a ... Lorem ipsum dolor sit amet, 
 La principal contribución de este trabajo es ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis. Nullam luctus elit ac laoreet vulputate. Mauris metus nisl, ultricies in diam eget, faucibus accumsan arcu. Quisque eget blandit nibh, in facilisis
 
 ## Resumen capitular
-
-<!--
-For italic, add one * on either side of the text
-For bold, add two * on either side of the text
-For bold and italic, add _** on either side of the text
--->
 
 Este trabajo está dividido en XX capítulos. Al principio se encuentra This is a brief outline of what went into each chapter. **Capítulo 1** lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. **Capítulo 2** lorem ipsum dolor sit amet, consectetur adipiscing elit. **Capítulo 3** lorem ipsum dolor sit amet, consectetur adipiscing elit. **Capítulo 4** lorem ipsum dolor sit amet, consectetur adipiscing elit.
 

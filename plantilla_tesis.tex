@@ -13,15 +13,17 @@
 %Paquetes
 % Typografia
 %\usepackage{fontspec}
-%\usepackage{charter} %% Charter
-%\renewcommand{\familydefault}{bch}
+\usepackage{charter} %% Charter
+\renewcommand{\familydefault}{bch}
 %\usepackage{avant} %% Avant Grade
 %\renewcommand{\familydefault}{pag}
-\usepackage{palatino} %% Palatino
-\renewcommand{\familydefault}{ppl}
+%\usepackage{palatino} %% Palatino
+%\renewcommand{\familydefault}{ppl}
 %\usepackage{helvet} %% Helvetica
 %\renewcommand{\familydefault}{phv}
 %\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{ebgaramond}
+
 
 \usepackage{cite} %Referenciar citas en biblitex
 \usepackage{apacite}
@@ -50,7 +52,7 @@
 %\onehalfspacing
 %\raggedbottom
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+%\usepackage{lmodern}
 
 $if(numbersections)$
 $else$
@@ -161,7 +163,6 @@ $endif$
 \newcommand{\bigrule}{\titlerule[0.5mm]}
 \titleformat{\chapter}[display] % CAMBIAMOS EL FORMATO DE LOS CAPÍTULOS
 {\bfseries\Huge} % por defecto se usarán caracteres de tamaño \Huge en negrita
-%{\Huge\thechapter. }
 {% contenido de la etiqueta
 \titlerule % línea horizontal
 \filleft % texto alineado a la derecha
@@ -170,6 +171,15 @@ $endif$
 {0mm} % espacio mínimo entre etiqueta y cuerpo
 {\filleft} % texto del cuerpo alineado a la derecha
 [\vspace{0.5mm} \bigrule] % después del cuerpo, dejar espacio vertical y trazar línea horizontal gruesa
+
+%%%------------------------------------------------------------------------
+%%% Tablas
+%%%------------------------------------------------------------------------
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{array}
+\newcolumntype{x}[1]{%
+>{\centering\arraybackslash}m{#1}}%
 
 %%%------------------------------------------------------------------------
 %%% Cuerpo del Documento

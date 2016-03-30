@@ -135,7 +135,7 @@ p span.removed {
     height: 100%;
     background: #fafafa;
     max-width: 300px;
-    font-family: Arial;
+    font-family: Helvetica, Verdana, Arial,sans-serif;
     font-size: 15px;
     line-height: 30px;
 }

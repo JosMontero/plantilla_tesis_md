@@ -68,8 +68,8 @@ Las nuevas fuentes bibliográficas se agregan en *capitulos/bibliografia.bib* em
 ## Requerimientos
 ### Windows
 - Git [http://git-scm.com](http://git-scm.com)
-- GNU Make
-- GNU Awk
+- GNU Make [http://gnuwin32.sourceforge.net/packages/make.htm](http://gnuwin32.sourceforge.net/packages/make.htm)
+- GNU Awk [http://gnuwin32.sourceforge.net/packages/gawk.htm](http://gnuwin32.sourceforge.net/packages/gawk.htm)
 - MiKTeX, [http://miktex.org](http://miktex.org/download)
 - Texmaker, [www.xm1math.net/texmaker/](http://www.xm1math.net/texmaker/download.html)
 - Pandoc, [https://github.com/jgm/pandoc/releases/tag/1.16.0.2](https://github.com/jgm/pandoc/releases/tag/1.16.0.2)
