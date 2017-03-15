@@ -28,7 +28,7 @@ help:
 	@echo 'o unas genericas desde:https://github.com/jgm/pandoc-templates		  '
 
 pdf:
-	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --template plantilla_tesis.tex --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" -o "$(TESIS)".pdf "$(CAPITULOS)"/*.md
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --template plantilla_tesis.tex --filter pandoc-citeproc --csl "$(CSL)".csl -s -S --bibliography "$(BIB)" -o "$(TESIS)".pdf "$(CAPITULOS)"/*.md
 
 docx:
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" --toc --number-sections -o "$(TESIS)".docx "$(CAPITULOS)"/*.md
