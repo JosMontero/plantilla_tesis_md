@@ -13,8 +13,8 @@
 %Paquetes
 % Typografia
 %\usepackage{fontspec}
-\usepackage{charter} %% Charter
-\renewcommand{\familydefault}{bch}
+%%\usepackage{charter} %% Charter
+%%\renewcommand{\familydefault}{bch}
 %\usepackage{avant} %% Avant Grade
 %\renewcommand{\familydefault}{pag}
 %\usepackage{palatino} %% Palatino
@@ -23,7 +23,10 @@
 %\renewcommand{\familydefault}{phv}
 %\renewcommand{\familydefault}{\sfdefault}
 %\usepackage{ebgaramond}
-
+%\usepackage[ttscale=0.85]{libertine} %% Fuente Libertine Linux
+\usepackage[proportional]{libertine} %% Fuente Libertine Linux
+\usepackage{lettrine}
+\renewcommand{\ttfamily}{\fontencoding{OT1}\fontfamily{cmtt}\selectfont}
 
 \usepackage{cite} %Referenciar citas en biblitex
 \usepackage[natbibapa]{apacite}
@@ -122,7 +125,7 @@ $endif$
 
 %% Si no quieres usar git o el paquete vc (desde CTAN), comenta la línea correspondientes.
 %% Si comentas, debes estar seguro de comentar toda la sección
-\immediate\write18{sh ./vc}
+\immediate\write18{sh ./vc.sh}
 \input{vc}
 
 %%%------------------------------------------------------------------------

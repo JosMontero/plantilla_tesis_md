@@ -44,10 +44,21 @@
     <category citation-format="author-date"/>
     <category field="psychology"/>
     <category field="generic-base"/>
-    <updated>2017-03-16T20:05:01+00:00</updated>
+    <updated>2017-03-16T22:52:01+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xmlns="http://purl.org/net/xbiblio/csl" version="1.0" xml:lang="en">
+    <style-options punctuation-in-quote="false"/>
+    <date form="text">
+      <date-part name="day" prefix="el " suffix=" de "/>
+      <date-part name="month" suffix=" de "/>
+      <date-part name="year"/>
+    </date>
+    <date form="numeric">
+      <date-part name="day" form="numeric-leading-zeros" suffix="/"/>
+      <date-part name="month" form="numeric-leading-zeros" suffix="/"/>
+      <date-part name="year"/>
+    </date>
     <terms>
     <term name="accessed">consultado</term>
     <term name="and">y</term>
