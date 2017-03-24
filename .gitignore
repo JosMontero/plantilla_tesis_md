@@ -2,3 +2,7 @@
 auto/plantilla_tesis.el
 
 .projectile
+
+*.sav
+
+*.bak
