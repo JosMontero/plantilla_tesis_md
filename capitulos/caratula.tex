@@ -1,0 +1,121 @@
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% portada.tex-- Portada para tesis de posgrado de la Facultad de IngenierÃ­a. UNAM.
+% Realizada por Gengis Kanhg Toledo RamÃ­rez (gengiskanhg.geo@yahoo.com)
+% Basada en la portada escrita por: Tim Rohrer, LT, USN--31 July 1996 del NPS, Monterey, California. USA.
+% y en el manual The Not So Short Introduction to LaTeX de Tobiaz Oetiker
+% Eres libre de modificar este archivo de acuerdo a tus necesidades.
+% 13 de Junio de 2007
+%
+% Compile with:
+% pdflatex caratula.tex
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Modificada por Julio Fernando Jimenez Vielma  CIC-IPN
+% 2011
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% AdaptaciÃ³n para la maestrÃ­a MCIC-CIC-IPN
+% Alejandro GÃ³mez <alegzc@yahoo.com.mx>
+% 2012
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\documentclass[letterpaper, spanish]{book}
+%\usepackage[latin1]{inputenc} Â¿used in Windows?
+\usepackage[utf8]{inputenc} % Linux's text encoding scheme
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[defaultsans]{droidsans} %% Selección de la tipografía, fuente Droid Sans
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be typewriter style
+\usepackage[T1]{fontenc}
+
+% \usepackage[x-1a]{pdfx} % PARA-IMPRIMIR % generates PDF / X-1a compliant PDF.
+% \usepackage[a-1b]{pdfx} % PARA ALMACENAR (ARCHIVAR) % generates PDF / A -1b compliant PDF.
+
+\usepackage[pdfa]{hyperref}% pdfa => para almacenar (archivar)
+\hypersetup{
+%     bookmarks=true,         % show bookmarks bar?
+    unicode=true,          % non-Latin characters in Acrobatâ€™s bookmarks
+%     pdftoolbar=true,        % show Acrobatâ€™s toolbar?
+%     pdfmenubar=true,        % show Acrobatâ€™s menu?
+%     pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Portada},    % title
+    pdfauthor={Alejandro GÃ³mez-Conde},     % author
+    pdfsubject={Portada tesis},   % subject of the document
+    pdfcreator={PDFLaTeX},   % creator of the document
+    pdfproducer={PDFLaTeX}, % producer of the document
+    pdfkeywords={Portada} {tesis} {mcic} %, % list of keywords
+%     pdfnewwindow=true,      % links in new window
+%     colorlinks=false,       % false: boxed links; true: colored links
+%     linkcolor=red,          % color of internal links
+%     citecolor=green,        % color of links to bibliography
+%     filecolor=magenta,      % color of file links
+%     urlcolor=cyan           % color of external links
+}
+
+\setlength{\voffset}{-0.5cm}
+\setlength{\hoffset}{0.7cm}
+\setlength{\headsep}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\oddsidemargin}{-0.8in}
+\setlength{\marginparwidth}{-0.5cm}
+\setlength{\textwidth}{19.5cm}
+\setlength{\footskip}{2pt}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{25cm}
+\setlength{\fboxrule}{3pt}
+
+\begin{document}
+\pagenumbering{alph}
+\thispagestyle{empty}
+
+\begin{tabular}{p{3cm}p{15.0cm}}
+\includegraphics[width=2.5cm]{estilos/unam.png}
+\begin{center}
+\rule[1cm]{1.5mm}{16.0cm}%vertical
+\hspace{2pt}
+\rule[0cm]{0.7mm}{17.0cm}%vertical
+\hspace{2pt}
+\rule[1cm]{1.5mm}{16.0cm}%vertical
+\end{center}
+\includegraphics[width=5cm]{estilos/pcadmon.jpg}
+&
+\vspace{-3.4cm}
+\begin{center}
+\Large{ \bf{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}}
+\\
+\rule[0mm]{15.0cm}{0.35mm}%horizontal
+\\
+\rule[3mm]{15.0cm}{1.2mm}%horizontal
+\\
+\textbf{FACULTAD DE CONTADURÍA Y ADMINISTRACIÓN}
+
+\vspace{2.8\baselineskip}
+
+Posgrado en Ciencias de la Administración
+
+\vspace{2.3\baselineskip}
+
+{\Large{Título de tu tesis}}
+
+%\vfill
+\vspace*{1.2cm}
+
+\Large{\bf T E S I S}
+
+\vspace*{1.0cm}
+Por:
+
+\vspace*{1.25cm} {\Large \bf{Tu nombre completo}}
+
+\vspace*{1.25cm}
+Director/a de tesis:
+
+\large{\bf El nombre de tu tutor}
+
+\vspace*{2.0 cm}
+\Large{Ciudad Universitaria, CD. MX.}\hspace*{5cm}\Large{(mes en que se realiza el examen con letra
+minúscula) de 201X}
+
+\end{center}
+
+\end{tabular}
+
+\end{document}

@@ -28,16 +28,16 @@ help:
 	@echo 'o unas genericas desde:https://github.com/jgm/pandoc-templates		  '
 
 pdf:
-	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --template plantilla_tesis.tex --filter pandoc-citeproc --csl "$(CSL)".csl -s -S --bibliography "$(BIB)" -o "$(TESIS)".pdf "$(CAPITULOS)"/*.md
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --template plantilla_tesis.tex --filter pandoc-citeproc --csl "$(CSL)".csl -s -f markdown+smart --bibliography "$(BIB)" -o "$(TESIS)".pdf "$(CAPITULOS)"/*.md
 
 docx:
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -s -S --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" --toc --number-sections -o "$(TESIS)".docx "$(CAPITULOS)"/*.md
 
 epub:
-	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --epub-cover-image="$(ESTILOSDIR)"/portada.png -s -S --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" --toc --number-sections --epub-stylesheet="$(ESTILOSDIR)"/epub.css --to epub3 -o "$(TESIS)".epub "$(CAPITULOS)"/*.md
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block --epub-cover-image="$(ESTILOSDIR)"/portada.png -s -f markdown+smart --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography "$(BIB)" --toc --number-sections --epub-stylesheet="$(ESTILOSDIR)"/epub.css --to epub3 -o "$(TESIS)".epub "$(CAPITULOS)"/*.md
 
 html:
-	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -S --template="$(ESTILOSDIR)"/template.html --include-in-header="$(ESTILOSDIR)"/style.css --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography="$(BIB)" --toc --number-sections -o "$(TESIS)".html "$(CAPITULOS)"/*.md
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -f markdown+smart --template="$(ESTILOSDIR)"/template.html --include-in-header="$(ESTILOSDIR)"/style.css --filter pandoc-citeproc --csl "$(CSL)".csl --bibliography="$(BIB)" --toc --number-sections -o "$(TESIS)".html "$(CAPITULOS)"/*.md
 
 
 clean:

@@ -1,3 +1,11 @@
+---
+lang: es-MX
+fontsize: 12pt
+smart: yes
+linestretch: 1.1
+geometry: margin=1.4in
+---
+
 <!--
 Portada Posgrado en Ciencias de la Administración, UNAM
 -->

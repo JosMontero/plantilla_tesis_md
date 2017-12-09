@@ -32,8 +32,35 @@ Víncular la figura en el texto **Figura \ref{figura1}** sed sit amet pulvinar d
 
 ![Calypso es la nave de formación de la Armada Real Británico  \label{figura1}](capitulos/figuras/ejemplo_figura.pdf){ width=50% }
 
+
+### Uso de imagenes multiples con LaTEX
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat.
+
+Código LaTEX en el documento Markdown
+
+```latex
+\begin{figure}[htbp]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{Primer títutlo.\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{capitulos/figuras/FIGURA_2_2a}}\hfill
+\subcaptionbox{Segundo título.\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{capitulos/figuras/FIGURA_2_2b}}\hfill
+\caption{Descripción General.} \label{fig:1}
+\end{figure}
+```
+
+Resultado:
+
+\begin{figure}[htbp]
+\centering
+\setlength{\lineskip}{\medskipamount}
+\subcaptionbox{Primer títutlo.\label{fig:1a}}{\includegraphics[width=0.5\textwidth]{capitulos/figuras/FIGURA_2_2a}}\hfill
+\subcaptionbox{Segundo título.\label{fig:1b}}{\includegraphics[width=0.5\textwidth]{capitulos/figuras/FIGURA_2_2b}}\hfill
+\caption{Descripción General.} \label{fig:1}
+\end{figure}
+
 ### Insertar código
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo.
 
 Ejemplo de fracción de código fuente en Python:
 
@@ -41,7 +68,7 @@ Ejemplo de fracción de código fuente en Python:
 print "Hello World!"
 ```
 ### Tablas
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta diam et volutpat. Nam mattis facilisis pulvinar. Donec consectetur pulvinar ullamcorper. Aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo.
 
 | Columna 1     | Columna 2     |
 | ------------- | ------------- |
@@ -53,11 +80,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula porta
 
 La tabla \ref{ref_tabla} aenean ac eleifend dolor. Sed imperdiet enim id ligula tempor, eget hendrerit ex commodo. Etiam dapibus fermentum rutrum. Sed sit amet pulvinar dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In volutpat sem lacus, sit amet scelerisque dui consectetur quis.
 
+| Alineado a la izq. | Centrado | Alineado a la der. |
+|:-------------------|:--------:|-------------------:|
+| prueba             | prueba   | prueba             |
+
+: Ejemplo de alineados en tablas
+
 \newpage
 
 
 Día | Ingresos | Egresos
---- | --- | ---
+--- | ---: | ---:
 1 | $25,000 | $50
 2 | $200 | $320
 3 | $5 | $50,000
@@ -69,15 +102,12 @@ Día | Ingresos | Egresos
 ---------------------------------------------------------------------------
 Día                 Ingreso                 Egreso
 --------------      -------------------     -------------------
-Fila 1              $25,000                 $50
+Fila 1              $25,000                  $50
 
-Fila 2              $200                    $320
+Fila 2              $200                     $320
 
 Fila 3              $5                        $50,000      
 
 ---------------------------------------------------------------------------
 
-Table: Ingresos y egresos. 
-
-
-
+Table: Ingresos y egresos.

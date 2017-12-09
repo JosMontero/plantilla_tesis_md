@@ -8,14 +8,14 @@
 %%% - Jesús Velázquez & Marco Ruiz. 2012. Tesis FI UNAM. https://github.com/Tepexic/Tesis-FI-UNAM
 %%% - Tom Pollard. 2015, febrero 2. Template for writing a PhD thesis in Markdown. https://github.com/tompollard/phd_thesis_markdown
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[letterpaper, 12pt, spanish, twoside]{report} %book
+\documentclass[letterpaper, $fontsize$, spanish, twoside]{report} %book
 \usepackage{multirow,booktabs,setspace,caption, subcaption}
 
 %Paquetes
 % Typografia
 %\usepackage{fontspec}
-%%\usepackage{charter} %% Charter
-%%\renewcommand{\familydefault}{bch}
+%\usepackage{charter} %% Charter
+%\renewcommand{\familydefault}{bch}
 %\usepackage{avant} %% Avant Grade
 %\renewcommand{\familydefault}{pag}
 %\usepackage{palatino} %% Palatino
@@ -28,7 +28,6 @@
 \usepackage[proportional]{libertine} %% Fuente Libertine Linux
 \usepackage{lettrine}
 \renewcommand{\ttfamily}{\fontencoding{OT1}\fontfamily{cmtt}\selectfont}
-
 \usepackage[T1]{fontenc}
 
 \usepackage{cite} %Referenciar citas en biblitex
@@ -48,22 +47,16 @@
 \usepackage{grffile}
 
 %% Parametros para margenes del documento
-\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
-
 $if(geometry)$
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $endif$
-
-%%\setlength\parindent{0.4in} % indent at start of paragraphs (set to 0.3?)
 \setlength{\parskip}{9pt}
-%%%\usepackage[width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
-%%%\setlength{\parskip}{9pt}
-\renewcommand{\baselinestretch}{1.5} %Espaciado de línea 1.5 puntos
+\setlength\parindent{0pt} % indentation
+\renewcommand{\baselinestretch}{$linestretch$} %Espaciado de línea 1.5 puntos
 \usepackage{siunitx}
 
-% Adjust spacing between lines to 1.5
 \usepackage{setspace}
-\onehalfspacing
+\onehalfspacing % Adjust spacing between lines to 1.5
 % \doublespacing
 \raggedbottom
 
@@ -99,9 +92,9 @@ $endif$
 %% Subtitulos
 \usepackage{sectsty}
 \usepackage[normalem]{ulem}
-%\sectionfont{\rmfamily\mdseries\Large}
-%\subsectionfont{\rmfamily\mdseries\scshape\large}
-%\subsubsectionfont{\rmfamily\bfseries\upshape\large}
+\sectionfont{\rmfamily\bfseries\large}
+\subsectionfont{\rmfamily\bfseries\scshape\normalsize}
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize}
 
 $if(verbatim-in-note)$
 \VerbatimFootnotes % Notas de pie
@@ -110,17 +103,6 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-$if(title)$
-\title{$title$}
-$endif$
-
-$if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-$endif$
-
-$if(date)$
-\date{$date$}
-$endif$
 % Listas y viñetas:
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -189,11 +171,10 @@ $endif$
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\thechapter. #1 }}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
-%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{}}{}}
-%\renewcommand{\sectionmark}[1]{\markright{}}
+
 \fancyhf{}
-\fancyhead[RO]{\bfseries\rightmark}
-\fancyhead[LE]{\bfseries\leftmark}
+\fancyhead[RO]{\sffamily\scshape\rightmark}
+\fancyhead[LE]{\sffamily\scshape\leftmark}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.1pt}
@@ -252,8 +233,6 @@ $endif$
 \newcommand{\blandscape}{\begin{landscape}}
 \newcommand{\elandscape}{\end{landscape}}
 
-
-
 %%%------------------------------------------------------------------------
 %%% Cuerpo del Documento
 %%%------------------------------------------------------------------------
@@ -263,15 +242,6 @@ $endif$
   $if(alignment)$
   \begin{$alignment$}
   $endif$
-
-  %$if(title)$
-  %\maketitle
-  %$endif$
-  %$if(abstract)$
-  %\begin{abstract}
-  %$abstract$
-  %\end{abstract}
-  %$endif$
 
   %$for(include-before)$
   %$include-before$
